@@ -28,7 +28,7 @@ public class PigLatin {
                 (s.charAt(x) == 's' && (s.charAt(y) == 'c' || s.charAt(y) == 'h' || s.charAt(y) == 'k' || s.charAt(y) == 'l' || s.charAt(y) == 'm' ||
                         s.charAt(y) == 'n' || s.charAt(y) == 'p' || s.charAt(y) == 't' || s.charAt(y) == 'w'))) {
             String hold = "";
-            hold = s.charAt(x) + s.charAt(y);
+            hold = "" + s.charAt(x) + s.charAt(y);
             s = s.substring(2);
             latinized = s + hold + "ay";
         } else {
