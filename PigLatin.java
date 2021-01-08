@@ -7,11 +7,18 @@ public class PigLatin {
         if (s.charAt(x) == 'a' || s.charAt(x) == 'e' || s.charAt(x) == 'i' || s.charAt(x) == 'o' || s.charAt(x) == 'u') {
             latinized = s + "hay";
         } else {
-            char hold = ' ';
-            hold = s.charAt(x);
+          if (s.charAt(x) == 'A' || s.charAt(x) == 'E' || s.charAt(x) == 'I' || s.charAt(x) == 'O' || s.charAt(x) == 'U') {
+            hold = "" + s.charAt(x);
+            hold = hold.toLowerCase();
+            s = s.substring(1);
+            latinized = hold + s + "hay";
+          } else {
+            String hold = "";
+            hold = "" + s.charAt(x);
             hold = hold.toLowerCase();
             s = s.substring(1);
             latinized = s + hold + "ay";
+          }
         }
         return latinized;
     }
@@ -47,7 +54,7 @@ public class PigLatin {
         return latinized;
     }
 
-    public static String pigLatinBest(String s){
-
-    }
+//    public static String pigLatinBest(String s){
+//
+//    }
 }
