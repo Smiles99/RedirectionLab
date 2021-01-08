@@ -2,22 +2,24 @@ import java.util.Scanner;
 
 public class MakeStars {
     public static void main(String[] args) {
-        Scanner n = new Scanner( System.in );
-        String output = "";
-        String hold = "";
+        Scanner n = new Scanner(System.in);
         while (n.hasNextLine()) {
-            n.nextLine();
-            while (n.hasNext()) {
-                String input = n.next();
+            String line = n.nextLine();
+            String output = "";
+            Scanner m = new Scanner(line);
+            while (m.hasNext()) {
+                String input = m.next();
                 int x = 0;
-                hold = "";
+                String hold = "";
                 while (x < input.length()) {
                     hold = hold + "*";
+                    x++;
                 }
-                hold = hold + " ";
+                output = output + hold + " ";
             }
-            output = output + hold;
+            m.close();
             System.out.println(output);
         }
+        n.close();
     }
 }
