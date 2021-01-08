@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class PigLatin {
     public static String pigLatinSimple(String s){
         int x = 0;
@@ -7,6 +9,7 @@ public class PigLatin {
         } else {
             char hold = ' ';
             hold = s.charAt(x);
+            hold = hold.toLowerCase();
             s = s.substring(1);
             latinized = s + hold + "ay";
         }
@@ -42,5 +45,9 @@ public class PigLatin {
             }
         }
         return latinized;
+    }
+
+    public static String pigLatinBest(String s){
+
     }
 }
