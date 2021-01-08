@@ -61,9 +61,10 @@ public class PigLatin {
       int y = 1;
       String latinized = "";
       if(s.isLetter(s.charAt(x))) {
-        String hold = "";
-        hold = "" + s.charAt(x);
-        hold = hold.toLowerCase();
+        String hold1 = "";
+        String hold2 = "";
+        hold1 = "" + s.charAt(x);
+        hold1 = hold1.toLowerCase();
         s = hold + s.substring(1);
         if(s.length() >= 2 && (s.charAt(x) == 'b' && (s.charAt(y) == 'l' || s.charAt(y) == 'r')) ||
                 (s.charAt(x) == 'c' && (s.charAt(y) == 'h' || s.charAt(y) == 'k' || s.charAt(y) == 'l' || s.charAt(y) == 'r')) ||
@@ -74,15 +75,16 @@ public class PigLatin {
                 (s.charAt(x) == 'p' && (s.charAt(y) == 'h' || s.charAt(y) == 'l' || s.charAt(y) == 'r')) ||
                 (s.charAt(x) == 'q' && s.charAt(y) == 'u') ||
                 (s.charAt(x) == 's' && (s.charAt(y) == 'c' || s.charAt(y) == 'h' || s.charAt(y) == 'k' || s.charAt(y) == 'l' || s.charAt(y) == 'm' ||
-                        s.charAt(y) == 'n' || s.charAt(y) == 'p' || s.charAt(y) == 't' || s.charAt(y) == 'w'))) {
-            hold = "" + s.charAt(x) + s.charAt(y);
-            s = s.substring(2);
+                                        s.charAt(y) == 'n' || s.charAt(y) == 'p' || s.charAt(y) == 't' || s.charAt(y) == 'w'))) {
+            hold1 = "" + s.charAt(x) + s.charAt(y);
+            if (s.charAt())
+            s = s.substring(2, s.charAt);
             latinized = s + hold + "ay";
         } else {
             if (s.charAt(x) == 'a' || s.charAt(x) == 'e' || s.charAt(x) == 'i' || s.charAt(x) == 'o' || s.charAt(x) == 'u') {
                 latinized = s + "hay";
             } else {
-                hold = "" + s.charAt(x);
+                hold1 = "" + s.charAt(x);
                 s = s.substring(1);
                 latinized = s + hold + "ay";
             }
