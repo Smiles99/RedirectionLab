@@ -69,7 +69,7 @@ public class PigLatin {
                 hold1 = "" + s.charAt(x);
                 hold1 = hold1.toLowerCase();
                 s = hold1 + s.substring(1);
-                if(s.length() >= 2 && (s.charAt(x) == 'b' && (s.charAt(y) == 'l' || s.charAt(y) == 'r')) ||
+                if(s.length() >= 3 && (s.charAt(x) == 'b' && (s.charAt(y) == 'l' || s.charAt(y) == 'r')) ||
                         (s.charAt(x) == 'c' && (s.charAt(y) == 'h' || s.charAt(y) == 'k' || s.charAt(y) == 'l' || s.charAt(y) == 'r')) ||
                         (s.charAt(x) == 'd' && s.charAt(y) == 'r') ||
                         (s.charAt(x) == 'f' && (s.charAt(y) == 'l' || s.charAt(y) == 'r')) ||
